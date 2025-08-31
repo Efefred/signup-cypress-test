@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-08-31T22:46:55.437Z",
+    "end": "2025-08-31T22:46:57.233Z",
+    "duration": 1796,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "784148fb-a394-4dee-972d-eff22c4e1dbe",
+      "title": "",
+      "fullFile": "cypress/e2e/signup.cy.js",
+      "file": "cypress/e2e/signup.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "53ac0942-49e4-4709-9d84-c0ed7fd2d20b",
+          "title": "Sign Up Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "HAPPY PATH: Successful sign up",
+              "fullTitle": "Sign Up Page Tests HAPPY PATH: Successful sign up",
+              "timedOut": null,
+              "duration": 1654,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_SignUpPage.default.fillSignUpForm(_testData.default.validUser);\n_SignUpPage.default.acceptTerms();\n_SignUpPage.default.submitForm();\ncy.get(_SignUpPage.default.elements.successProducts).should(\"contain.text\", \"Products\");\ncy.get(_SignUpPage.default.elements.successCourses).should(\"contain.text\", \"All Courses\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://example.com/users/sign_up\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Sign Up Page Tests`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://example.com/users/sign_up\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Sign Up Page Tests`\n    at <unknown> (https://example.com/__cypress/runner/cypress_runner.js:135067:76)\n    at visitFailedByErr (https://example.com/__cypress/runner/cypress_runner.js:134637:12)\n    at <unknown> (https://example.com/__cypress/runner/cypress_runner.js:135050:13)\n    at tryCatcher (https://example.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://example.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://example.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://example.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://example.com/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://example.com/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://example.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://example.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://example.com/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://signup-cypress-test/./cypress/e2e/signup.cy.js:6:7)",
+                "diff": null
+              },
+              "uuid": "e0f81e88-b344-4cf1-baf9-57a5d96eac52",
+              "parentUUID": "53ac0942-49e4-4709-9d84-c0ed7fd2d20b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ERROR PATH: Blank Password",
+              "fullTitle": "Sign Up Page Tests ERROR PATH: Blank Password",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_SignUpPage.default.fillSignUpForm(_testData.default.invalidUser);\n_SignUpPage.default.acceptTerms();\n_SignUpPage.default.submitForm();\ncy.get(_SignUpPage.default.elements.errorMessage).should(\"contain.text\", \"Password can't be blank\");",
+              "err": {},
+              "uuid": "d8b5c5e5-bdc5-434e-8ad6-9889edda8ead",
+              "parentUUID": "53ac0942-49e4-4709-9d84-c0ed7fd2d20b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "ERROR PATH: Terms not accepted",
+              "fullTitle": "Sign Up Page Tests ERROR PATH: Terms not accepted",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_SignUpPage.default.fillSignUpForm(_testData.default.validUser);\n_SignUpPage.default.submitForm();\ncy.get(_SignUpPage.default.elements.errorMessage).should(\"contain.text\", \"Terms must be accepted\");",
+              "err": {},
+              "uuid": "151851f7-a3a7-4d4e-b14b-a1fa49ed0396",
+              "parentUUID": "53ac0942-49e4-4709-9d84-c0ed7fd2d20b",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e0f81e88-b344-4cf1-baf9-57a5d96eac52"
+          ],
+          "pending": [],
+          "skipped": [
+            "d8b5c5e5-bdc5-434e-8ad6-9889edda8ead",
+            "151851f7-a3a7-4d4e-b14b-a1fa49ed0396"
+          ],
+          "duration": 1654,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2025-08-31T23:12:07.995Z",
+    "end": "2025-08-31T23:12:37.680Z",
+    "duration": 29685,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "14d758a2-b46c-4360-9812-128756e99675",
+      "title": "",
+      "fullFile": "cypress/e2e/signup.cy.js",
+      "file": "cypress/e2e/signup.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fcbe37ee-ed3c-4f52-960b-f3124b1e4fb8",
+          "title": "Sign Up Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "HAPPY PATH: Successful sign up",
+              "fullTitle": "Sign Up Page Tests HAPPY PATH: Successful sign up",
+              "timedOut": null,
+              "duration": 9261,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_SignUpPage.default.fillSignUpForm(_testData.default.validUser);\n_SignUpPage.default.acceptTerms();\n_SignUpPage.default.submitForm();\ncy.get(_SignUpPage.default.elements.successProducts).should(\"contain.text\", \"Products\");\ncy.get(_SignUpPage.default.elements.successCourses).should(\"contain.text\", \"All Courses\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `#user\\[first_name\\]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `#user\\[first_name\\]`, but never found it.\n    at SignUpPage.fillSignUpForm (webpack://signup-cypress-test/./cypress/support/pages/SignUpPage.js:17:7)\n    at Context.eval (webpack://signup-cypress-test/./cypress/e2e/signup.cy.js:10:15)",
+                "diff": null
+              },
+              "uuid": "daa39d59-6242-4375-a80b-07487d38230f",
+              "parentUUID": "fcbe37ee-ed3c-4f52-960b-f3124b1e4fb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ERROR PATH: Blank Password",
+              "fullTitle": "Sign Up Page Tests ERROR PATH: Blank Password",
+              "timedOut": null,
+              "duration": 8451,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_SignUpPage.default.fillSignUpForm(_testData.default.invalidUser);\n_SignUpPage.default.acceptTerms();\n_SignUpPage.default.submitForm();\ncy.get(_SignUpPage.default.elements.errorMessage).should(\"contain.text\", \"Password can't be blank\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `#user\\[first_name\\]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `#user\\[first_name\\]`, but never found it.\n    at SignUpPage.fillSignUpForm (webpack://signup-cypress-test/./cypress/support/pages/SignUpPage.js:17:7)\n    at Context.eval (webpack://signup-cypress-test/./cypress/e2e/signup.cy.js:19:15)",
+                "diff": null
+              },
+              "uuid": "6af0478b-37a0-44c1-b528-7bec11e83f64",
+              "parentUUID": "fcbe37ee-ed3c-4f52-960b-f3124b1e4fb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ERROR PATH: Terms not accepted",
+              "fullTitle": "Sign Up Page Tests ERROR PATH: Terms not accepted",
+              "timedOut": null,
+              "duration": 8364,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_SignUpPage.default.fillSignUpForm(_testData.default.validUser);\n_SignUpPage.default.submitForm();\ncy.get(_SignUpPage.default.elements.errorMessage).should(\"contain.text\", \"Terms must be accepted\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `#user\\[first_name\\]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `#user\\[first_name\\]`, but never found it.\n    at SignUpPage.fillSignUpForm (webpack://signup-cypress-test/./cypress/support/pages/SignUpPage.js:17:7)\n    at Context.eval (webpack://signup-cypress-test/./cypress/e2e/signup.cy.js:27:15)",
+                "diff": null
+              },
+              "uuid": "7785fd5c-1312-43f9-8420-1e79fc08c510",
+              "parentUUID": "fcbe37ee-ed3c-4f52-960b-f3124b1e4fb8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "daa39d59-6242-4375-a80b-07487d38230f",
+            "6af0478b-37a0-44c1-b528-7bec11e83f64",
+            "7785fd5c-1312-43f9-8420-1e79fc08c510"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 26076,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

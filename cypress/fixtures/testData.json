@@ -1,0 +1,14 @@
+{
+  "validUser": {
+    "firstName": "Efe",
+    "lastName": "Fred",
+    "email": "racetopolymath@gmail.com",
+    "password": "Efefred@01"
+  },
+  "invalidUser": {
+    "firstName": "Efe",
+    "lastName": "Fred",
+    "email": "racetopolymath@gmail.com",
+    "password": ""
+  }
+}
